@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Actividad interactiva</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+            }
+
+            #sentence {
+                margin-bottom: 20px;
+            }
+
+            .dropzone {
+                display: inline-block;
+                width: 120px;
+                height: 30px;
+                margin: 0 5px;
+                border: 2px dashed #aaa;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .draggable {
+                display: inline-block;
+                margin: 10px;
+                padding: 5px 10px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                cursor: grab;
+            }
+
+            .draggable:active {
+                cursor: grabbing;
+            }
+
+            .correct {
+                border-color: green;
+            }
+
+            .incorrect {
+                border-color: red;
+            }
+
+            .timer {
+                font-weight: bold;
+                color: red;
+            }
+			 
+          
+
+           
+            .bg-circle-1, .bg-circle-2, .bg-circle-3, .bg-circle-4 {
+                display: none;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">ACTIVIDAD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                   
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">ACTIVIDAD</h1>
+                    <h2 class="masthead-subheading mb-0">Ponga a prueva sus conocimientos...</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#chapter1">¡Jugar Ya!</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+
+        <section id="chapter1">
+   <section id="chapter1">
+    <div class="container">
+	<p></p>
+	<p></p>
+        <h2>Introducción a la Guerra Fría</h2>
+        <p></p>
+		<p></p>
+
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>En</span>
+            <div class="dropzone" data-correct="1945"></div>
+            <span>, terminó la Segunda Guerra Mundial, marcando el inicio de tensiones entre dos superpotencias:</span>
+            <div class="dropzone" data-correct="Estados Unidos"></div>
+            <span>y</span>
+            <div class="dropzone" data-correct="la Unión Soviética"></div>.
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>La</span>
+            <div class="dropzone" data-correct="Doctrina Truman"></div>
+            <span>fue anunciada en 1947 por el presidente de Estados Unidos,</span>
+            <div class="dropzone" data-correct="Harry S. Truman"></div>
+            <span>, como parte de su estrategia para contener la expansión del</span>
+            <div class="dropzone" data-correct="comunismo"></div>.
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">Harry S. Truman</div>
+            <div class="draggable" draggable="true">comunismo</div>
+            <div class="draggable" draggable="true">la Unión Soviética</div>
+            <div class="draggable" draggable="true">1945</div>
+            <div class="draggable" draggable="true">Estados Unidos</div>
+            <div class="draggable" draggable="true">Doctrina Truman</div>
+        </div>
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="chapter2">
+    <div class="container">
+	<p></p>
+	<p></p>
+        <h2>América Latina y la Guerra Fría</h2>
+     <p></p>
+	 <p></p>
+
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>América Latina se convirtió en una "zona de influencia" de</span>
+            <div class="dropzone" data-correct="Estados Unidos"></div>
+            <span>debido a su cercanía</span>
+            <div class="dropzone" data-correct="geográfica"></div>
+            <span>y</span>
+            <div class="dropzone" data-correct="política"></div>.
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>Desde finales de las guerras de</span>
+            <div class="dropzone" data-correct="independencia"></div>
+            <span>, los líderes estadounidenses y latinoamericanos mantuvieron un buen entendimiento, ya que</span>
+            <div class="dropzone" data-correct="Estados Unidos"></div>
+            <span>apoyó a las antiguas colonias españolas en su lucha por la independencia.</span>
+        </div>
+
+        <!-- Tercera frase -->
+        <div id="sentence">
+            <span>Un evento clave fue la guerra entre</span>
+            <div class="dropzone" data-correct="EE. UU. y España"></div>
+            <span>en</span>
+            <div class="dropzone" data-correct="1898"></div>
+            <span>, que resultó en la independencia de</span>
+            <div class="dropzone" data-correct="Cuba"></div>
+            <span>y la instauración de la</span>
+            <div class="dropzone" data-correct="Enmienda Platt"></div>.
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">independencia</div>
+            <div class="draggable" draggable="true">geográfica</div>
+            <div class="draggable" draggable="true">Estados Unidos</div>
+            <div class="draggable" draggable="true">Enmienda Platt</div>
+            <div class="draggable" draggable="true">Cuba</div>
+            <div class="draggable" draggable="true">1898</div>
+            <div class="draggable" draggable="true">política</div>
+            <div class="draggable" draggable="true">EE. UU. y España</div>
+        </div>
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="chapter3">
+    <div class="container">
+	<p></p>
+	<p></p>
+        <h2>Golpe de Estado en Guatemala (1954)</h2>
+<p></p>
+<p></p>
+
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>Entre</span>
+            <div class="dropzone" data-correct="1931"></div>
+            <span>y</span>
+            <div class="dropzone" data-correct="1944"></div>
+            <span>, Jorge</span>
+            <div class="dropzone" data-correct="Ubico"></div>
+            <span>lideró una dictadura en Guatemala.</span>
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>En 1944, un movimiento cívico-militar inició la Revolución de</span>
+            <div class="dropzone" data-correct="democratización"></div>
+            <span>, que permitió la democratización del país.</span>
+        </div>
+
+        <!-- Tercera frase -->
+        <div id="sentence">
+            <span>En 1945, Juan José</span>
+            <div class="dropzone" data-correct="Arévalo"></div>
+            <span>llegó al poder con el</span>
+            <div class="dropzone" data-correct="80"></div>
+            <span>% de los votos y promovió reformas como el</span>
+            <div class="dropzone" data-correct="Código del Trabajo"></div>.
+        </div>
+
+        <!-- Cuarta frase -->
+        <div id="sentence">
+            <span>Más tarde, Jacobo Árbenz impulsó una</span>
+            <div class="dropzone" data-correct="reforma agraria"></div>
+            <span>que generó conflicto con terratenientes y EE. UU., llevando al golpe de estado de</span>
+            <div class="dropzone" data-correct="1954"></div>
+            <span>y al exilio de Árbenz.</span>
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">1931</div>
+            <div class="draggable" draggable="true">1944</div>
+            <div class="draggable" draggable="true">Ubico</div>
+            <div class="draggable" draggable="true">democratización</div>
+            <div class="draggable" draggable="true">Arévalo</div>
+            <div class="draggable" draggable="true">80</div>
+            <div class="draggable" draggable="true">Código del Trabajo</div>
+            <div class="draggable" draggable="true">reforma agraria</div>
+            <div class="draggable" draggable="true">1954</div>
+        </div>
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="chapter4">
+    <div class="container">
+	<p></p>
+	<p></p>
+        <h2>La Revolución Cubana: Contexto y Desarrollo</h2>
+<p></p>
+<p></p>
+
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>La Revolución Cubana transformó la historia de América Latina, derrumbando la dictadura de</span>
+            <div class="dropzone" data-correct="Batista"></div>
+            <span>y elevando a</span>
+            <div class="dropzone" data-correct="Fidel Castro"></div>
+            <span>como símbolo de resistencia.</span>
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>Estos grupos compartían el objetivo de derrocar al régimen por haber anulado la</span>
+            <div class="dropzone" data-correct="Constitución de 1940"></div>
+            <span>, considerada la más avanzada de América Latina.</span>
+        </div>
+
+        <!-- Tercera frase -->
+        <div id="sentence">
+            <span>El régimen de Batista cayó por varias razones, entre ellas la pérdida de apoyo de las élites y la</span>
+            <div class="dropzone" data-correct="división"></div>
+            <span>de las fuerzas armadas.</span>
+        </div>
+
+        <!-- Cuarta frase -->
+        <div id="sentence">
+            <span>Inicialmente, Cuba intentó mantener relaciones cordiales con Estados Unidos, pero la reforma</span>
+            <div class="dropzone" data-correct="agraria"></div>
+            <span>tensó los vínculos, llevando a un acercamiento con la</span>
+            <div class="dropzone" data-correct="URSS"></div>.
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">Batista</div>
+            <div class="draggable" draggable="true">Fidel Castro</div>
+            <div class="draggable" draggable="true">Constitución de 1940</div>
+            <div class="draggable" draggable="true">división</div>
+            <div class="draggable" draggable="true">agraria</div>
+            <div class="draggable" draggable="true">URSS</div>
+        </div>
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="chapter6">
+    <div class="container">
+        <h2>La “Vía Chilena al Socialismo” (1970-1973)</h2>
+        <p>Arrastra las palabras correctas al lugar correspondiente:</p>
+
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>Mientras que en Cuba la revolución se lograba a través de la</span>
+            <div class="dropzone" data-correct="lucha armada"></div>
+            <span>, en Chile surgió una izquierda liderada por</span>
+            <div class="dropzone" data-correct="Salvador Allende"></div>
+            <span>, que proponía una vía diferente conocida como la "vía chilena al socialismo".</span>
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>En 1970, Allende se presentó a las elecciones formando una coalición llamada</span>
+            <div class="dropzone" data-correct="Unidad Popular (UP)"></div>
+            <span>, integrada por partidos como el</span>
+            <div class="dropzone" data-correct="Partido Radical (PR)"></div>
+            <span>, el Partido Comunista (PC) y el MAPU. Ganó con un</span>
+            <div class="dropzone" data-correct="36"></div>
+            <span>% de los votos.</span>
+        </div>
+
+        <!-- Tercera frase -->
+        <div id="sentence">
+            <span>Allende creía en una vía</span>
+            <div class="dropzone" data-correct="pacífica"></div>
+            <span>, mientras que Castro defendía un modelo más</span>
+            <div class="dropzone" data-correct="violento"></div>.
+        </div>
+
+        <!-- Cuarta frase -->
+        <div id="sentence">
+            <span>El proyecto político de Allende incluía una</span>
+            <div class="dropzone" data-correct="reforma agraria"></div>
+            <span>, la</span>
+            <div class="dropzone" data-correct="nacionalización"></div>
+            <span>de sectores estratégicos como el cobre y la distribución de medio litro de</span>
+            <div class="dropzone" data-correct="leche"></div>
+            <span>diaria para combatir la desnutrición.</span>
+        </div>
+
+        <!-- Quinta frase -->
+        <div id="sentence">
+            <span>El golpe de Estado de 1973, liderado por</span>
+            <div class="dropzone" data-correct="Augusto Pinochet"></div>
+            <span>, incluyó el bombardeo del</span>
+            <div class="dropzone" data-correct="Palacio de La Moneda"></div>
+            <span>, marcando el fin de la vía chilena al socialismo.</span>
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">lucha armada</div>
+            <div class="draggable" draggable="true">Salvador Allende</div>
+            <div class="draggable" draggable="true">Unidad Popular (UP)</div>
+            <div class="draggable" draggable="true">Partido Radical (PR)</div>
+            <div class="draggable" draggable="true">36</div>
+            <div class="draggable" draggable="true">pacífica</div>
+            <div class="draggable" draggable="true">violento</div>
+            <div class="draggable" draggable="true">reforma agraria</div>
+            <div class="draggable" draggable="true">nacionalización</div>
+            <div class="draggable" draggable="true">leche</div>
+            <div class="draggable" draggable="true">Augusto Pinochet</div>
+            <div class="draggable" draggable="true">Palacio de La Moneda</div>
+        </div>
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+<section id="chapter7">
+    <div class="container">
+	<p></p>
+	<p></p>
+        <h2>Las Dictaduras Militares del Cono Sur</h2>
+<p></p>
+<p></p>
+        <!-- Primera frase -->
+        <div id="sentence">
+            <span>El golpe de Estado en Chile no fue un caso aislado, ya que hubo otros golpes en América Latina contra dictaduras</span>
+            <div class="dropzone" data-correct="anticomunistas"></div>
+            <span>. Estos golpes fueron justificados por los militares, quienes afirmaban que en esos lugares existían</span>
+            <div class="dropzone" data-correct="guerrillas"></div>
+            <span>urbanas.</span>
+        </div>
+
+        <!-- Segunda frase -->
+        <div id="sentence">
+            <span>Las guerrillas urbanas surgieron después del fracaso de las guerrillas rurales durante los años</span>
+            <div class="dropzone" data-correct="1960"></div>
+            <span>. Entre los ejemplos de guerrillas urbanas están los</span>
+            <div class="dropzone" data-correct="montoneros"></div>
+            <span>en Uruguay, los</span>
+            <div class="dropzone" data-correct="MIR"></div>
+            <span>en Argentina, y el</span>
+            <div class="dropzone" data-correct="presidentes"></div>
+            <span>en Chile.</span>
+        </div>
+
+        <!-- Tercera frase -->
+        <div id="sentence">
+            <span>A partir de 1958, la política exterior de EE. UU. cambió, ya que dejaron de apoyar las</span>
+            <div class="dropzone" data-correct="dictaduras"></div>
+            <span>en América Latina. En 1961, el presidente Kennedy propuso la</span>
+            <div class="dropzone" data-correct="Alianza"></div>
+            <span>para el progreso, un plan que ayudaba a los países latinoamericanos con una suma de</span>
+            <div class="dropzone" data-correct="veinte"></div>
+            <span>millones de dólares.</span>
+        </div>
+
+        <!-- Cuarta frase -->
+        <div id="sentence">
+            <span>Entre 1971 y 1976, hubo una serie de golpes de Estado en el Cono Sur, incluyendo Chile,</span>
+            <div class="dropzone" data-correct="Bolivia"></div>
+            <span>, y</span>
+            <div class="dropzone" data-correct="Uruguay"></div>
+            <span>. Estas dictaduras justificaron su poder debido a la presencia de</span>
+            <div class="dropzone" data-correct="guerrillas"></div>
+            <span>urbanas y la Doctrina de</span>
+            <div class="dropzone" data-correct="Seguridad"></div>
+            <span>Nacional.</span>
+        </div>
+
+        <!-- Quinta frase -->
+        <div id="sentence">
+            <span>Según Hal Brands, existen tres explicaciones posibles para los golpes de Estado: la radicalización de las Fuerzas Armadas, la</span>
+            <div class="dropzone" data-correct="inestabilidad"></div>
+            <span>económica provocada por los proyectos</span>
+            <div class="dropzone" data-correct="reformistas"></div>
+            <span>, y la intervención del</span>
+            <div class="dropzone" data-correct="CIA"></div>
+            <span>de los Estados Unidos.</span>
+        </div>
+
+        <!-- Opciones -->
+        <div id="options">
+            <div class="draggable" draggable="true">anticomunistas</div>
+            <div class="draggable" draggable="true">guerrillas</div>
+            <div class="draggable" draggable="true">1960</div>
+            <div class="draggable" draggable="true">montoneros</div>
+            <div class="draggable" draggable="true">MIR</div>
+            <div class="draggable" draggable="true">presidentes</div>
+            <div class="draggable" draggable="true">dictaduras</div>
+            <div class="draggable" draggable="true">Alianza</div>
+            <div class="draggable" draggable="true">veinte</div>
+            <div class="draggable" draggable="true">Bolivia</div>
+            <div class="draggable" draggable="true">Uruguay</div>
+            <div class="draggable" draggable="true">Seguridad</div>
+            <div class="draggable" draggable="true">inestabilidad</div>
+            <div class="draggable" draggable="true">reformistas</div>
+            <div class="draggable" draggable="true">CIA</div>
+        </div>
+		<p></p>
+		<p></p>
+		<!-- Primera frase -->
+<div id="sentence">
+    <span>La</span>
+    <div class="dropzone" data-correct="URSS"></div>
+    <span>tuvo una postura ambivalente hacia las dictaduras</span>
+    <div class="dropzone" data-correct="anticomunistas"></div>
+    <span>en América Latina, manteniendo relaciones con</span>
+    <div class="dropzone" data-correct="Argentina y Brasil"></div>
+    <span>por intereses comerciales y políticos.</span>
+</div>
+
+<!-- Segunda frase -->
+<div id="sentence">
+    <span>El</span>
+    <div class="dropzone" data-correct="Plan Cóndor"></div>
+    <span>fue una red represiva en el</span>
+    <div class="dropzone" data-correct="Cono Sur"></div>
+    <span>que permitió torturas, asesinatos y desapariciones, como el caso de Carlos Prats y Orlando Letelier.</span>
+</div>
+
+<!-- Tercera frase -->
+<div id="sentence">
+    <span>El modelo económico</span>
+    <div class="dropzone" data-correct="neoliberal"></div>
+    <span>en Chile fue promovido por los</span>
+    <div class="dropzone" data-correct="Chicago Boys"></div>
+    <span>, quienes impulsaron un sistema que favoreció a los ricos pero aumentó las</span>
+    <div class="dropzone" data-correct="desigualdades sociales"></div>.
+</div>
+
+<!-- Opciones -->
+<div id="options">
+    <div class="draggable" draggable="true">URSS</div>
+    <div class="draggable" draggable="true">anticomunistas</div>
+    <div class="draggable" draggable="true">Argentina y Brasil</div>
+    <div class="draggable" draggable="true">Plan Cóndor</div>
+    <div class="draggable" draggable="true">Cono Sur</div>
+    <div class="draggable" draggable="true">neoliberal</div>
+    <div class="draggable" draggable="true">Chicago Boys</div>
+    <div class="draggable" draggable="true">desigualdades sociales</div>
+</div>
+
+
+        <button onclick="checkAnswers()">Comprobar respuestas</button>
+        <button onclick="resetActivity()">Reiniciar actividad</button>
+        <p id="result"></p>
+    </div>
+</section>
+
+
+
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; LLCER Español 2024</p></div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            const draggables = document.querySelectorAll(".draggable");
+            const dropzones = document.querySelectorAll(".dropzone");
+            let timeLeft = 60;
+
+            draggables.forEach(draggable => {
+                draggable.addEventListener("dragstart", event => {
+                    event.dataTransfer.setData("text", event.target.textContent);
+                });
+            });
+
+            dropzones.forEach(dropzone => {
+                dropzone.addEventListener("dragover", event => {
+                    event.preventDefault();
+                });
+
+                dropzone.addEventListener("drop", event => {
+                    event.preventDefault();
+                    const data = event.dataTransfer.getData("text");
+                    event.target.textContent = data;
+                    event.target.classList.remove("correct", "incorrect");
+                });
+            });
+
+
+
+            function checkAnswers() {
+                let correct = 0;
+                dropzones.forEach(dropzone => {
+                    const answer = dropzone.textContent.trim();
+                    const correctAnswer = dropzone.getAttribute("data-correct");
+                    if (answer === correctAnswer) {
+                        dropzone.classList.add("correct");
+                        correct++;
+                    } else {
+                        dropzone.classList.add("incorrect");
+                    }
+                });
+
+                const score = correct * 10 + timeLeft;
+                const result = document.getElementById("result");
+                result.textContent = `Respuestas correctas: ${correct} de ${dropzones.length}. Puntuación: ${score}`;
+            }
+
+            function resetActivity() {
+                dropzones.forEach(dropzone => {
+                    dropzone.textContent = "";
+                    dropzone.classList.remove("correct", "incorrect");
+                });
+
+                timeLeft = 60;
+                startTimer();
+                document.getElementById("result").textContent = "";
+            }
+
+            window.onload = startTimer;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>La izquierda de América Latina</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+	<div id="reader-container" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <button id="read-text-button" title="Escuchar contenido" style="background-color: #f77f00; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+        🔊
+    </button>
+</div>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">La izquierda de América Latina</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="D:\Guerra fria -LLCER esp\assets\images\clase3.jpg" alt=".." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                       La izquierda de
+                        <span class="text-primary">América Latina</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        (antes de 1959)
+					<p>   </p>
+					<p>    </p>
+					<p>   </p>
+                 
+                    </div>
+                    <p class="lead mb-5">Para comprender el contexto, es importante mencionar que, durante la Segunda Guerra Mundial (1939-1945), Estados Unidos y la Unión Soviética formaron una alianza militar contra los nazis. Esta unión permitió a la URSS mejorar su imagen, que había sido negativa. Después de la guerra, se empezaron a implementar ideas comunistas en el mundo a través de partidos políticos y ministros. En ese momento, América Latina comenzó a establecer relaciones diplomáticas con la URSS, lo que llevó al envío de embajadores de ambos lados.</p>
+                    <p class="lead mb-5">Un ejemplo de esto fue Argentina. A partir de 1950, se establecieron relaciones entre Estados, y aunque los partidos comunistas aumentaron su prestigio y votos, nunca llegaron al poder, excepto en Cuba. La Guerra Fría trajo una nueva ola de anticomunismo, que se consolidó en 1948 con la creación de la DEA, una coalición anticomunista.</p>
+					<p class="lead mb-5">El inicio de la Guerra Fría suscitó debates sobre su comienzo, ya sea con el bloqueo de Berlín en 1948 o el discurso de Churchill en 1947 sobre el “telón de hierro" el cual dividió el mundo en dos ideologías. Esta división resultó en una política de prohibición de los partidos comunistas, ya que las relaciones con la URSS se deterioraron.</p>
+					<p class="lead mb-5">Hasta 1954, hubo estabilidad económica en América Latina gracias a la alianza con EE. UU. Sin embargo, esta relación se rompió por varios eventos, siendo el más impactante el caso de Guatemala en 1954.</p>
+										
+
+                </div>
+            </section>
+			<h4>Más infomación</h4>
+                <iframe src="https://drive.google.com/file/d/1-48qVPFIBXMrU85pymrMwy9cliTOz8L9/preview" width="100%" height="600px"></iframe>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+		<script>
+   
+    const readButton = document.getElementById("read-text-button");
+
+    
+    function readPageContent() {
+        const utterance = new SpeechSynthesisUtterance();
+        
+        
+        const contentToRead = document.querySelectorAll("body > :not(nav)");
+        let text = "";
+
+       
+        contentToRead.forEach((element) => {
+            text += element.innerText + " ";
+        });
+
+        
+        utterance.text = text; 
+        utterance.lang = "es-ES"; 
+        utterance.rate = 1; 
+        speechSynthesis.speak(utterance);
+    }
+
+   
+    function stopReading() {
+        if (speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+        }
+    }
+
+    
+    readButton.addEventListener("click", () => {
+        if (speechSynthesis.speaking) {
+            stopReading(); 
+        } else {
+            readPageContent();
+        }
+    });
+</script>
+    </body>
+</html>
